@@ -1,0 +1,15 @@
+{
+  "name": "nrml",
+  "version": "1.0.0",
+  "description": "Numeric Normalization, Scaling for Machine Learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Christian Maurer <chris_p_maurer@yahoo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.1"
+  }
+}
