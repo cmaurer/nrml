@@ -2,9 +2,17 @@ const min = require('../util/min')
 const max = require('../util/max')
 const numberFilter = require('../util/filters').numberFilter
 
+const verifyRange = (range) => {
+  //range should be [min, max]
+  if (range[0] > range[1]) {
+    return range.reverse()
+  }
+  return range
+}
 
 const minMaxWithRange = (a, range) => {
   if (Array.isArray(a) && Array.isArray(range)) {
+    range = verifyRange(range)
     let _min = min(a)
     let _max = max(a)
     let maxmin = ((_max - _min) + range[0])

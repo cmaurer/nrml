@@ -30,8 +30,15 @@ describe('minmax', function() {
       minMax.should.eql([ 1, 0.8, 0.6, 0.4, 0.2, 0 ])
     })
 
-    it('should return min and max with supplied range ', () => {
+    it('should return min and max with supplied range', () => {
       let minMax = minmax([-4, 0, 5, 6, 9], [0, 100])
+      minMax.should.exist
+      minMax.should.be.an.Array
+      minMax.should.eql([0, 30.7692, 69.2308, 76.9231, 100])
+    })
+
+    it('should return min and max with supplied reversed range', () => {
+      let minMax = minmax([-4, 0, 5, 6, 9], [100, 0])
       minMax.should.exist
       minMax.should.be.an.Array
       minMax.should.eql([0, 30.7692, 69.2308, 76.9231, 100])
