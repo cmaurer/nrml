@@ -1,5 +1,7 @@
 
-const sum = require('../util/sum')
+const mean = require('../util/mean')
+const sd = require('../util/sd')
+const diff = require('../util/diff')
 
 /**
   http://sebastianraschka.com/Articles/2014_about_feature_scaling.html#about-min-max-scaling
@@ -14,7 +16,24 @@ const sum = require('../util/sum')
   z = x − μσ
 
 */
+
+const numberFilter = (x) => {
+  return typeof x === 'number'
+}
+
 module.exports = (a) => {
 
+  if(Array.isArray(a)) {
+    let _mean = mean(a)
+    let _sd = sd(a)
+    return a.map((x) => {
+      if (typeof x === 'number') {
+        return (x - _mean) / _sd
+      }
+    })
+    .filter(numberFilter)
+
+  }
+  throw new Error('parameter a is not an Array')
 
 }
