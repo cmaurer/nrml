@@ -1,5 +1,10 @@
 
+/*
 
+  Computes an array that is the result of subtracting each element in the array (a)
+  by the supplied value (v)
+
+*/
 module.exports = (a, v) => {
   if(Array.isArray(a)) {
     return a.map((d) => {

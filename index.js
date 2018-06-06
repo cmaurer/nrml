@@ -11,6 +11,8 @@ const zscore = require('./util/zscore')
 
 const minmax = require('./scaling/min.max')
 const standard = require('./scaling/standard')
+const binary = require('./scaling/binary')
+const decimal = require('./scaling/decimal')
 
 module.exports = {
   max: max,
@@ -22,5 +24,7 @@ module.exports = {
   diff: diff,
   zscore: zscore,
   minmax: minmax,
-  standard: standard
+  standard: standard,
+  binary: binary,
+  decimal: decimal
 }
