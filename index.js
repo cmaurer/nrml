@@ -4,6 +4,7 @@ const max = require('./util/max')
 const min = require('./util/min')
 const mean = require('./util/mean')
 const sum = require('./util/sum')
+const variance = require('./util/variance')
 const sd = require('./util/sd')
 const diff = require('./util/diff')
 const zscore = require('./util/zscore')
@@ -16,6 +17,7 @@ module.exports = {
   min: min,
   mean: mean,
   sum: sum,
+  variance: variance,
   sd: sd,
   diff: diff,
   zscore: zscore,

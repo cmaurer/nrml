@@ -12,11 +12,11 @@ describe('standard', function() {
       standardArr.should.exist
       standardArr.should.be.an.Array
       standardArr.should.eql([
-        -0.9411764705882353,
-        -0.8823529411764706,
-        -0.29411764705882354,
+        -0.9412,
+        -0.8824,
+        -0.2941,
         1,
-        1.1176470588235294
+        1.1176
       ])
 
     })

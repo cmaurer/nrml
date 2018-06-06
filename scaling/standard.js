@@ -2,6 +2,7 @@
 const mean = require('../util/mean')
 const sd = require('../util/sd')
 const diff = require('../util/diff')
+const numberFilter = require('../util/filters').numberFilter
 
 /**
   http://sebastianraschka.com/Articles/2014_about_feature_scaling.html#about-min-max-scaling
@@ -17,10 +18,6 @@ const diff = require('../util/diff')
 
 */
 
-const numberFilter = (x) => {
-  return typeof x === 'number'
-}
-
 module.exports = (a) => {
 
   if(Array.isArray(a)) {
@@ -28,7 +25,7 @@ module.exports = (a) => {
     let _sd = sd(a)
     return a.map((x) => {
       if (typeof x === 'number') {
-        return (x - _mean) / _sd
+        return Number(((x - _mean) / _sd).toFixed(4))
       }
     })
     .filter(numberFilter)

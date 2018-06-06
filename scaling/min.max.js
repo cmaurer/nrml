@@ -1,5 +1,6 @@
 const min = require('../util/min')
 const max = require('../util/max')
+const numberFilter = require('../util/filters').numberFilter
 
 /**
 
@@ -15,9 +16,6 @@ Xnorm = X−Xmin / Xmax−Xmin
 
 */
 
-const numberFilter = (x) => {
-  return typeof x === 'number'
-}
 
 module.exports = (a) => {
   if (Array.isArray(a)) {
@@ -26,7 +24,7 @@ module.exports = (a) => {
     let maxmin = (_max - _min)
     return a.map((x) => {
       if (typeof x === 'number') {
-        return (x - _min) / maxmin
+        return Number(((x - _min) / maxmin).toFixed(4))
       }
     })
     .filter(numberFilter)
