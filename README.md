@@ -50,5 +50,6 @@ which results in the following array
 ### mean
 ### sum
 ### sd
+### variance
 ### zscore
 ### diff

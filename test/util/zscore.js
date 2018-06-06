@@ -7,7 +7,6 @@ describe('zscore', () => {
 
   describe('happy path', () => {
 
-    //borrowed from https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.zscore.html
     it('should return an array of zscores', () => {
       let _zscores = zscore([7, 8, 8, 7.5, 9])
       _zscores.should.exist
