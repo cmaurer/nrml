@@ -5,7 +5,7 @@
 
 ## Methods
 
-- MinMax
+### MinMax
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Xnorm&space;=&space;\frac{X&space;-&space;Xmin}{Xmax&space;-&space;Xmin}" target="_blank">
  <img src="https://latex.codecogs.com/gif.latex?Xnorm&space;=&space;\frac{X&space;-&space;Xmin}{Xmax&space;-&space;Xmin}" title="Xnorm = \frac{X - Xmin}{Xmax - Xmin}" /></a>
@@ -17,21 +17,22 @@ let minMaxArr = minmax(arr)
 ```
 
 which results in the following array
+
 ```
 [ 0, 0.2, 0.4, 0.6, 0.8, 1 ]
 ```
 
-- Standardization (z-score normalization)
+### Standardization (z-score normalization)
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Xnorm&space;=&space;\frac&space;{X&space;-&space;\overline{X}&space;}{\sigma&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Xnorm&space;=&space;\frac&space;{X&space;-&space;\overline{X}&space;}{\sigma&space;}" title="Xnorm = \frac {X - \overline{X} }{\sigma }" /></a>
 
 
 ## Utility Functions
 
- - min
- - max
- - mean
- - sum
- - sd
- - zscore
- - diff
+### min
+### max
+### mean
+### sum
+### sd
+### zscore
+### diff
