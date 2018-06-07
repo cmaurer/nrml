@@ -19,7 +19,6 @@ const numberFilter = require('../util/filters').numberFilter
 */
 
 module.exports = (a) => {
-
   if(Array.isArray(a)) {
     let _mean = mean(a)
     let _sd = sd(a)
@@ -32,5 +31,4 @@ module.exports = (a) => {
 
   }
   throw new Error('parameter a is not an Array')
-
 }
