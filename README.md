@@ -43,6 +43,14 @@ which results in the following array
 [ -0.9411764705882353, -0.8823529411764706, -0.29411764705882354, 1, 1.1176470588235294 ]
 ```
 
+### Binary
+
+
+
+### Decimal
+
+
+
 ## Utility Functions
 
 ### min
